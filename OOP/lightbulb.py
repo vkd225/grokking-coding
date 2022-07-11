@@ -9,7 +9,13 @@ class LightBulb:
     self.input_voltage = input_voltage
 
   def show_luminosity(self):
-    return self.input_voltage
+    luminosity = 0
+    if self.input_voltage < 5 and self.input_voltage > 15:
+      return luminosity
+
+    elif self.input_voltage >= 5 and self.input_voltage <= 15:
+      luminosity = self.input_voltage/2
+      return luminosity
 
 class Dimmer:
   def __init__(self, watt):
@@ -19,6 +25,6 @@ class Dimmer:
     return self.watt
 
 
-d = Dimmer(12)
-print(d.output_luminosity())
+d = LightBulb(12)
+print(d.show_luminosity())
 

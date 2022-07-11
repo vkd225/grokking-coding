@@ -40,10 +40,3 @@ class Color:
       self.undo_stack([x,y, current_color])
 
     return
-
-
-abc
-def
-123
-
-
