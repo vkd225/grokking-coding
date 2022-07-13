@@ -31,4 +31,7 @@ def trapping_rain(rain):
 print (trapping_rain(rain))
 
 
+# https://leetcode.com/problems/trapping-rain-water/discuss/1374608/C%2B%2BJavaPython-MaxLeft-MaxRight-so-far-with-Picture-O(1)-space-Clean-and-Concise
+
+
 
