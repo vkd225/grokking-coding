@@ -57,7 +57,7 @@
 #  minimum number of rooms needed.
 
 
-from heapq import *
+# from heapq import *
 
 
 class Meeting:
