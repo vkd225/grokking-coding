@@ -36,12 +36,25 @@ def min_coin_problem(coins, V, m):
 coins = [9, 6, 5, 1]
 m = len(coins)
 V = 11
-print("Minimum coins required is",min_coins(coins, V))
+# print("Minimum coins required is",min_coins(coins, V))
 
 
+coins.sort() # c = [1, 5, 6, 9]
 
+# Bottom up approach
+def get_min_coins_dp(coins, V):
+  dp = [float("inf") for amount in range(V + 1)]
 
+  dp[0] = 0
 
+  for c in coins:
+    for amount, min_coin in enumerate(dp):
+      if c <= amount:
+        dp[amount] = min(min_coin, 1 + dp[amount - c])
 
+  print (dp)
+  return dp[V]
+
+print(get_min_coins_dp(coins, V))
 
 
